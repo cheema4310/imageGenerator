@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Unbounded:wght@300;700&display=swap');
+
+
+/* font-family: 'Roboto', sans-serif; 300, 400, 500
+font-family: 'Unbounded', cursive; 300, 700*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-black: #222831;
+    --light-black: #393E46;
+    --blue: #00ADB5;
+    --slate: #EEEEEE;
+}
+
+body {
+    background-color: var(--light-black);
+    color: var(--slate);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--dark-black);  
+}
+
+.hLeft{
+    font-family: 'Unbounded', cursive;
+    font-weight: 400;
+}
+
+.hRight a{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    margin: 0 3rem;
+    
+}
+
+.form-section {
+    flex: 2;
+    
+}
+
+
+
+#imageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 2rem; */
+}
+
+#imageForm>h1 {
+    color: var(--blue);
+    font-size: 2rem;
+    margin: 3rem 0;
+    font-family: 'Unbounded', cursive;
+    font-weight: 700;
+}
+
+.form-control {
+    width: 74%;
+    margin: 0.8rem auto;
+}
+
+.form-control>input {
+    line-height: 2rem;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    background: var(--slate);
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: var(--blue) 2.5px 2.5px 3.5px;
+}
+
+.form-control>select {
+    width: 100%;
+    height: 2rem;
+    background: var(--slate);
+    outline: none;
+    border-radius: 0.3rem;
+    box-shadow: var(--blue) 2.6px 2.6px 3.5px;
+    font-size: 1rem;
+    border: none;
+}
+
+
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    background: var(--blue);
+    color: var(--slate);
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--slate);
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+
+.img-section {
+    flex: 3;
+    
+}
+
+.img-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+.msg{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: var(--dark-black);
+    height: 10vh;
+    font-family: 'Unbounded', cursive;
+    
+    
+}
+
+footer a{
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/* Other Devices Screen Size */
+@media screen and (max-width: 1100px) {
+    #imageForm>h1 {
+      font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 0.3rem var(--blue); 
+    }
+      ::-webkit-scrollbar-thumb {
+        background: var(--dark-black); 
+    }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--blue); 
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        height: 160vh;
+    }
+
+    .hRight a{
+        font-size: 0.9rem;
+    }
+
+    #imageForm>h1{
+        font-size: 2.2rem;
+    }
+
+    footer{
+        font-size: 0.7rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main{
+        margin: 0;
+        height: 135vh;
+    }
+    .hRight a{
+        font-size: 0.8rem;
+    }
+    .hLeft{
+        font-size: 0.8rem;
+    }
+    #imageForm>h1 {
+        font-size: 1.7rem;
+    }
+    
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon-16x16.png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/spinner.css" />
+    <script src="js/main.js" defer></script>
+
+    <title>OpenAI Image Generator</title>
+  </head>
+  <body>
+    <header>
+      <div class="hLeft">CyanaBot</div>
+      <div class="hRight">
+        <a href="https://beta.openai.com/docs" target="_blank">OpenAI Docs</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <form id="imageForm">
+          <h1>Describe the Image</h1>
+
+          <div class="form-control">
+            <input type="text" id="prompt" placeholder="Enter Text" />
+          </div>
+
+          <div class="form-control">
+            <select name="size" id="size">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn">Generate</button>
+        </form>
+      </section>
+
+      <section class="img-section">
+        <div class="img-container">
+          <h2 class="msg">Image will display here</h2>
+          <img id="showImage" src="" alt="" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h5>
+        Designed & Built by
+        <a href="https://portfoliowebsite-36820.web.app/" target="_blank"
+          >Zubair Cheema</a
+        >
+      </h5>
+    </footer>
+
+    <div class="loading"></div>
+  </body>
+</html>

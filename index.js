@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const dotenv = require("dotenv").config();
 const openaiRoutes = require("./routes/openaiRoutes");
@@ -9,6 +10,9 @@ const app = express();
 // Enable BodyParser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+//Set Static Folder
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/openai", openaiRoutes);
 
