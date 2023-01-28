@@ -17,7 +17,7 @@ const onSubmit = (e) => {
 const generateImageRequest = async (prompt, size) => {
   try {
     showLoading();
-    const response = await fetch("/openai/generateimage", {
+    const response = await fetch("openai/generateimage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
